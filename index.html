@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Campus Plug — Nigeria's #1 student marketplace. Buy & sell wigs, accessories, fashion, gadgets, food & services across Nigerian universities.">
+    <meta name="keywords" content="Nigerian student marketplace, campus shopping, university marketplace, buy sell campus, student vendors Nigeria">
+    <meta name="author" content="Campus Plug">
+    <meta property="og:title" content="Campus Plug — Your Campus, Your Marketplace">
+    <meta property="og:description" content="The digital marketplace built for Nigerian university students. Buy & sell goods and services within your campus community.">
+    <meta property="og:type" content="website">
+    <title>Campus Plug — Your Campus, Your Marketplace</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">Campus<span class="accent">Plug</span></div>
+            <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <a href="#" class="navbar-brand" id="navbarBrand">Campus<span class="accent">Plug</span></a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#categories" class="nav-link">Categories</a></li>
+                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <a href="#waitlist" class="btn btn-ghost" id="navLoginBtn">Log In</a>
+                <a href="#waitlist" class="btn btn-primary" id="navSignupBtn">Get Started</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-nav-links">
+                <li><a href="#features" class="mobile-nav-link">Features</a></li>
+                <li><a href="#categories" class="mobile-nav-link">Categories</a></li>
+                <li><a href="#how-it-works" class="mobile-nav-link">How It Works</a></li>
+                <li><a href="#testimonials" class="mobile-nav-link">Reviews</a></li>
+                <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+            </ul>
+            <div class="mobile-nav-actions">
+                <a href="#waitlist" class="btn btn-ghost btn-block">Log In</a>
+                <a href="#waitlist" class="btn btn-primary btn-block">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-badge" id="heroBadge">
+                    <span class="badge-dot"></span>
+                    Now live in 15+ Nigerian Universities
+                </div>
+
+                <h1 class="hero-title" id="heroTitle">
+                    Your Campus,<br>
+                    <span class="accent">Your Marketplace.</span>
+                </h1>
+
+                <p class="hero-subtitle" id="heroSubtitle">
+                    The digital plug where student buyers meet student sellers. From wigs to web design, snacks to sneakers — find and sell everything your campus needs.
+                </p>
+
+                <div class="hero-cta" id="heroCta">
+                    <a href="#waitlist" class="btn btn-primary btn-lg" id="heroCtaBtn">
+                        Join the Waitlist
+                        <i data-lucide="arrow-right" class="btn-icon"></i>
+                    </a>
+                    <a href="#how-it-works" class="btn btn-outline btn-lg" id="heroLearnBtn">
+                        See How It Works
+                    </a>
+                </div>
+
+                <div class="hero-stats" id="heroStats">
+                    <div class="hero-stat">
+                        <span class="stat-number" data-target="12000">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Students Joined</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="stat-number" data-target="5000">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Products Listed</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Universities</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual" id="heroVisual">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="app-header-mock">
+                                <span class="app-mock-logo">CampusPlug</span>
+                                <div class="app-mock-icons">
+                                    <i data-lucide="search" class="mock-icon"></i>
+                                    <i data-lucide="bell" class="mock-icon"></i>
+                                </div>
+                            </div>
+                            <div class="app-categories-mock">
+                                <div class="cat-pill active">Trending</div>
+                                <div class="cat-pill">Hair</div>
+                                <div class="cat-pill">Fashion</div>
+                                <div class="cat-pill">Gadgets</div>
+                            </div>
+                            <div class="app-products-mock">
+                                <div class="product-card-mock">
+                                    <div class="product-img-mock" style="background: linear-gradient(135deg, #667eea, #764ba2);"><span>💇‍♀️</span></div>
+                                    <div class="product-info-mock">
+                                        <span class="product-name-mock">Brazilian Body Wave</span>
+                                        <span class="product-price-mock">₦15,000</span>
+                                        <span class="product-vendor-mock">@hair_by_temi</span>
+                                    </div>
+                                </div>
+                                <div class="product-card-mock">
+                                    <div class="product-img-mock" style="background: linear-gradient(135deg, #f093fb, #f5576c);"><span>👟</span></div>
+                                    <div class="product-info-mock">
+                                        <span class="product-name-mock">Nike Air Max</span>
+                                        <span class="product-price-mock">₦28,500</span>
+                                        <span class="product-vendor-mock">@dripstore_ng</span>
+                                    </div>
+                                </div>
+                                <div class="product-card-mock">
+                                    <div class="product-img-mock" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"><span>🎧</span></div>
+                                    <div class="product-info-mock">
+                                        <span class="product-name-mock">AirPods Pro Max</span>
+                                        <span class="product-price-mock">₦45,000</span>
+                                        <span class="product-vendor-mock">@techplug_ui</span>
+                                    </div>
+                                </div>
+                                <div class="product-card-mock">
+                                    <div class="product-img-mock" style="background: linear-gradient(135deg, #43e97b, #38f9d7);"><span>🍔</span></div>
+                                    <div class="product-info-mock">
+                                        <span class="product-name-mock">Loaded Shawarma</span>
+                                        <span class="product-price-mock">₦2,500</span>
+                                        <span class="product-vendor-mock">@campus_grills</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="app-nav-mock">
+                                <div class="nav-mock-item active"><i data-lucide="home" class="mock-nav-icon"></i><span>Home</span></div>
+                                <div class="nav-mock-item"><i data-lucide="compass" class="mock-nav-icon"></i><span>Explore</span></div>
+                                <div class="nav-mock-item nav-mock-center"><div class="nav-mock-plus"><i data-lucide="plus" class="mock-nav-icon"></i></div><span>Sell</span></div>
+                                <div class="nav-mock-item"><i data-lucide="message-circle" class="mock-nav-icon"></i><span>Chat</span></div>
+                                <div class="nav-mock-item"><i data-lucide="user" class="mock-nav-icon"></i><span>Profile</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By -->
+    <section class="trusted-section" id="trusted">
+        <div class="container">
+            <p class="trusted-label">Trusted by students from top Nigerian universities</p>
+            <div class="logo-ticker">
+                <div class="logo-ticker-track">
+                    <div class="uni-logo">UNILAG</div>
+                    <div class="uni-logo">OAU</div>
+                    <div class="uni-logo">UI</div>
+                    <div class="uni-logo">UNIBEN</div>
+                    <div class="uni-logo">LASU</div>
+                    <div class="uni-logo">FUTA</div>
+                    <div class="uni-logo">UNILORIN</div>
+                    <div class="uni-logo">COVENANT</div>
+                    <div class="uni-logo">BABCOCK</div>
+                    <div class="uni-logo">ABUAD</div>
+                    <div class="uni-logo">ABU</div>
+                    <div class="uni-logo">UNIJOS</div>
+                    <div class="uni-logo">UNILAG</div>
+                    <div class="uni-logo">OAU</div>
+                    <div class="uni-logo">UI</div>
+                    <div class="uni-logo">UNIBEN</div>
+                    <div class="uni-logo">LASU</div>
+                    <div class="uni-logo">FUTA</div>
+                    <div class="uni-logo">UNILORIN</div>
+                    <div class="uni-logo">COVENANT</div>
+                    <div class="uni-logo">BABCOCK</div>
+                    <div class="uni-logo">ABUAD</div>
+                    <div class="uni-logo">ABU</div>
+                    <div class="uni-logo">UNIJOS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Why Campus Plug?</p>
+                <h2 class="section-title">Built for Campus Life</h2>
+                <p class="section-subtitle">We're not just another marketplace. We're the digital hub designed by students, for students — addressing the unique needs of Nigerian campus life.</p>
+            </div>
+
+            <div class="features-grid" id="featuresGrid">
+                <div class="feature-card" id="featureCard1">
+                    <div class="feature-icon-wrap"><i data-lucide="shield-check"></i></div>
+                    <h3 class="feature-title">Student-Verified Only</h3>
+                    <p class="feature-desc">Every vendor is verified with their university credentials. No random sellers — just your trusted campus community.</p>
+                </div>
+                <div class="feature-card" id="featureCard2">
+                    <div class="feature-icon-wrap"><i data-lucide="zap"></i></div>
+                    <h3 class="feature-title">Instant Campus Delivery</h3>
+                    <p class="feature-desc">Meet on campus, get your items within minutes. No shipping fees, no waiting days — everything is just a hostel block away.</p>
+                </div>
+                <div class="feature-card" id="featureCard3">
+                    <div class="feature-icon-wrap"><i data-lucide="wallet"></i></div>
+                    <h3 class="feature-title">Student-Friendly Prices</h3>
+                    <p class="feature-desc">No middlemen, no crazy markups. Deal directly with vendors who understand the student pocket.</p>
+                </div>
+                <div class="feature-card" id="featureCard4">
+                    <div class="feature-icon-wrap"><i data-lucide="message-square"></i></div>
+                    <h3 class="feature-title">In-App Chat & Bargaining</h3>
+                    <p class="feature-desc">Message vendors directly, negotiate prices, and finalize deals — all within the app.</p>
+                </div>
+                <div class="feature-card" id="featureCard5">
+                    <div class="feature-icon-wrap"><i data-lucide="store"></i></div>
+                    <h3 class="feature-title">Your Own Digital Store</h3>
+                    <p class="feature-desc">Vendors get a beautiful storefront with analytics, inventory management, and customer reviews.</p>
+                </div>
+                <div class="feature-card" id="featureCard6">
+                    <div class="feature-icon-wrap"><i data-lucide="credit-card"></i></div>
+                    <h3 class="feature-title">Secure Payments</h3>
+                    <p class="feature-desc">Pay safely with bank transfer, card, or our secure escrow system. Your money is protected until you confirm delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">What's on Campus Plug?</p>
+                <h2 class="section-title">Everything Your Campus Needs</h2>
+                <p class="section-subtitle">From beauty to brains, food to fashion — if students want it, it's on Campus Plug.</p>
+            </div>
+
+            <div class="categories-grid" id="categoriesGrid">
+                <div class="category-card"><div class="category-icon"><i data-lucide="scissors"></i></div><h4 class="category-name">Hair & Wigs</h4><p class="category-count">2,400+ items</p></div>
+                <div class="category-card"><div class="category-icon"><i data-lucide="shirt"></i></div><h4 class="category-name">Fashion & Clothing</h4><p class="category-count">3,100+ items</p></div>
+                <div class="category-card"><div class="category-icon"><i data-lucide="gem"></i></div><h4 class="category-name">Accessories & Jewelry</h4><p class="category-count">1,800+ items</p></div>
+                <div class="category-card"><div class="category-icon"><i data-lucide="smartphone"></i></div><h4 class="category-name">Phones & Gadgets</h4><p class="category-count">980+ items</p></div>
+                <div class="category-card"><div class="category-icon"><i data-lucide="sparkles"></i></div><h4 class="category-name">Skincare & Beauty</h4><p class="category-count">1,500+ items</p></div>
+                <div class="category-card"><div class="category-icon"><i data-lucide="utensils"></i></div><h4 class="category-name">Food & Snacks</h4><p class="category-count">750+ vendors</p></div>
+                <div class="category-card"><div class="category-icon"><i data-lucide="pen-tool"></i></div><h4 class="category-name">Services</h4><p class="category-count">600+ providers</p></div>
+                <div class="category-card"><div class="category-icon"><i data-lucide="book-open"></i></div><h4 class="category-name">Textbooks & Notes</h4><p class="category-count">2,000+ items</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-section" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Simple as 1-2-3</p>
+                <h2 class="section-title">How Campus Plug Works</h2>
+                <p class="section-subtitle">Whether you're buying that perfect wig or starting your campus hustle, we've made it incredibly easy.</p>
+            </div>
+
+            <div class="how-toggle" id="howToggle">
+                <button class="how-toggle-btn active" data-tab="buyer" id="buyerToggle">I'm a Buyer</button>
+                <button class="how-toggle-btn" data-tab="seller" id="sellerToggle">I'm a Seller</button>
+                <div class="toggle-slider"></div>
+            </div>
+
+            <div class="how-steps" id="howSteps">
+                <div class="steps-group active" id="buyerSteps">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon-wrap"><i data-lucide="user-plus"></i></div>
+                        <h4 class="step-title">Sign Up with Your School Email</h4>
+                        <p class="step-desc">Create your account using your university email. Get verified as a bonafide student in seconds.</p>
+                    </div>
+                    <div class="step-connector"><i data-lucide="chevron-right"></i></div>
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <div class="step-icon-wrap"><i data-lucide="search"></i></div>
+                        <h4 class="step-title">Browse or Search</h4>
+                        <p class="step-desc">Explore categories, search for specific items, or check out what's trending on your campus right now.</p>
+                    </div>
+                    <div class="step-connector"><i data-lucide="chevron-right"></i></div>
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon-wrap"><i data-lucide="handshake"></i></div>
+                        <h4 class="step-title">Chat, Pay & Collect</h4>
+                        <p class="step-desc">Message the vendor, agree on price, pay securely, and pick up your item on campus.</p>
+                    </div>
+                </div>
+
+                <div class="steps-group" id="sellerSteps">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon-wrap"><i data-lucide="store"></i></div>
+                        <h4 class="step-title">Create Your Store</h4>
+                        <p class="step-desc">Set up your digital storefront in minutes. Add your brand name, logo, and a catchy bio.</p>
+                    </div>
+                    <div class="step-connector"><i data-lucide="chevron-right"></i></div>
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <div class="step-icon-wrap"><i data-lucide="package-plus"></i></div>
+                        <h4 class="step-title">List Your Products</h4>
+                        <p class="step-desc">Snap photos, set prices, add descriptions. List as many products or services as you want — it's free.</p>
+                    </div>
+                    <div class="step-connector"><i data-lucide="chevron-right"></i></div>
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon-wrap"><i data-lucide="banknote"></i></div>
+                        <h4 class="step-title">Get Paid Instantly</h4>
+                        <p class="step-desc">Receive orders, deliver on campus, and get paid directly to your bank account.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">What Students Say</p>
+                <h2 class="section-title">Trusted by Thousands</h2>
+                <p class="section-subtitle">Hear directly from students building and buying on Campus Plug.</p>
+            </div>
+
+            <div class="testimonials-grid" id="testimonialsGrid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"I started selling wigs on Campus Plug during my 200-level. Now I make over ₦150k monthly. This app literally changed my life on campus!"</p>
+                    <div class="testimonial-footer">
+                        <div class="testimonial-avatar">TA</div>
+                        <div class="testimonial-info">
+                            <span class="testimonial-name">Temilade A.</span>
+                            <span class="testimonial-role">Hair Vendor · UNILAG</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"No more wandering through campus asking 'who dey sell?' I just open Campus Plug, find what I need, and it's in my hands within 30 minutes."</p>
+                    <div class="testimonial-footer">
+                        <div class="testimonial-avatar">CO</div>
+                        <div class="testimonial-info">
+                            <span class="testimonial-name">Chidera O.</span>
+                            <span class="testimonial-role">Buyer · OAU</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"I do phone repairs and laptop setups. Campus Plug gave me a platform to advertise to thousands of students. My bookings tripled in my first month!"</p>
+                    <div class="testimonial-footer">
+                        <div class="testimonial-avatar">KE</div>
+                        <div class="testimonial-info">
+                            <span class="testimonial-name">Kelechi E.</span>
+                            <span class="testimonial-role">Tech Services · UI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="big-stat"><span class="big-stat-number" data-target="12000">0</span><span class="big-stat-suffix">+</span><span class="big-stat-label">Active Students</span></div>
+                <div class="big-stat"><span class="big-stat-number" data-target="2500">0</span><span class="big-stat-suffix">+</span><span class="big-stat-label">Verified Vendors</span></div>
+                <div class="big-stat"><span class="big-stat-number" data-target="15">0</span><span class="big-stat-suffix">+</span><span class="big-stat-label">Universities</span></div>
+                <div class="big-stat"><span class="big-stat-number" data-target="98">0</span><span class="big-stat-suffix">%</span><span class="big-stat-label">Satisfaction Rate</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">FAQ</p>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about Campus Plug.</p>
+            </div>
+
+            <div class="faq-grid" id="faqGrid">
+                <div class="faq-item" id="faq1">
+                    <button class="faq-question" aria-expanded="false"><span>Is Campus Plug only for buying physical products?</span><i data-lucide="plus" class="faq-icon"></i></button>
+                    <div class="faq-answer"><p>Not at all! Campus Plug supports both goods and services. You can find fashion items, wigs, gadgets, food — but also services like makeup artistry, graphic design, tutoring, photography, and much more.</p></div>
+                </div>
+                <div class="faq-item" id="faq2">
+                    <button class="faq-question" aria-expanded="false"><span>How do I know the vendors are legit?</span><i data-lucide="plus" class="faq-icon"></i></button>
+                    <div class="faq-answer"><p>Every vendor goes through our student verification process. They must register with a valid university email and student ID. Plus, our review system lets you see what other students think before you buy.</p></div>
+                </div>
+                <div class="faq-item" id="faq3">
+                    <button class="faq-question" aria-expanded="false"><span>Is it free to sell on Campus Plug?</span><i data-lucide="plus" class="faq-icon"></i></button>
+                    <div class="faq-answer"><p>Yes! Creating your store and listing products is completely free. We only charge a small transaction fee (3.5%) when you successfully make a sale. No monthly fees, no listing fees, no hidden charges.</p></div>
+                </div>
+                <div class="faq-item" id="faq4">
+                    <button class="faq-question" aria-expanded="false"><span>What universities are currently supported?</span><i data-lucide="plus" class="faq-icon"></i></button>
+                    <div class="faq-answer"><p>We're currently live in 15+ universities including UNILAG, OAU, UI, UNIBEN, LASU, FUTA, UNILORIN, COVENANT, BABCOCK, ABU, and more. We're rapidly expanding to cover every university in Nigeria.</p></div>
+                </div>
+                <div class="faq-item" id="faq5">
+                    <button class="faq-question" aria-expanded="false"><span>How does the payment system work?</span><i data-lucide="plus" class="faq-icon"></i></button>
+                    <div class="faq-answer"><p>We offer multiple payment options: bank transfer, debit card, and USSD. For high-value items, we have an escrow system where your money is held safely until you confirm you've received the item.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Waitlist -->
+    <section class="cta-section" id="waitlist">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Join<br><span class="accent">Campus Plug?</span></h2>
+                <p class="cta-subtitle">Be among the first to experience Campus Plug at your university. Join 12,000+ students already on the waitlist.</p>
+
+                <form class="waitlist-form" id="waitlistForm">
+                    <div class="form-row">
+                        <input type="text" class="form-input" id="nameInput" placeholder="Your Name" required>
+                        <input type="email" class="form-input" id="emailInput" placeholder="University Email" required>
+                        <select class="form-input form-select" id="universitySelect" required>
+                            <option value="" disabled selected>Select University</option>
+                            <option value="unilag">University of Lagos (UNILAG)</option>
+                            <option value="oau">Obafemi Awolowo University (OAU)</option>
+                            <option value="ui">University of Ibadan (UI)</option>
+                            <option value="uniben">University of Benin (UNIBEN)</option>
+                            <option value="lasu">Lagos State University (LASU)</option>
+                            <option value="futa">Federal University of Technology, Akure</option>
+                            <option value="unilorin">University of Ilorin (UNILORIN)</option>
+                            <option value="covenant">Covenant University</option>
+                            <option value="babcock">Babcock University</option>
+                            <option value="abu">Ahmadu Bello University (ABU)</option>
+                            <option value="abuad">Afe Babalola University (ABUAD)</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-row-center">
+                        <label class="role-label"><input type="radio" name="role" value="buyer" checked><span class="role-option">I want to buy</span></label>
+                        <label class="role-label"><input type="radio" name="role" value="seller"><span class="role-option">I want to sell</span></label>
+                        <label class="role-label"><input type="radio" name="role" value="both"><span class="role-option">Both</span></label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg" id="submitWaitlist">
+                        Join the Waitlist — It's Free
+                        <i data-lucide="arrow-right" class="btn-icon"></i>
+                    </button>
+                    <p class="form-note">We respect your privacy. No spam, ever.</p>
+                </form>
+
+                <div class="waitlist-success" id="waitlistSuccess" style="display: none;">
+                    <h3 class="success-title">You're In!</h3>
+                    <p class="success-text">Welcome to the Campus Plug family. We'll notify you as soon as we launch at your university.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">Campus<span class="accent">Plug</span></a>
+                    <p class="footer-desc">The digital marketplace built for Nigerian university students. Where student consumers meet student vendors.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Community Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Campus Plug. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
